@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6e6e6;
+    font-family: verdana, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .btn{
+    color: #315467;
+    box-shadow: 1px 1px 1px #315467, -2px 4px 4px #315467;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+   
+  }
+  
+  .btn2{
+    color: #315467;
+    box-shadow: 1px 1px 1px #e6e6e6, 1px 2px 4px #e6e6e6;
+   height: 2.2rem;
+   font-size: 1rem;
+   border-color: #e6e6e6;
+   border: none;
+   cursor: pointer;
+   width: 18rem;
+   margin-top: 1.2rem;
+  }
+  .birthday{
+  color: #e6e6e6;
+  }
+  .gender{
+  color: #e6e6e6;
+  }
+  .chois{
+    width:8rem;
+    text-align: center;
+   margin-bottom: 1.2rem;
+   margin-top: 1rem;
+   border-radius: 3rem;
+  }
+  .birth{
+    width: 4rem;
+    text-align: center;
+    border-radius: 3rem;
+  }
+ 
+ 
+  .login-box {
+    padding: 20px 50px;
+    background: #fff;
+    border-radius: 10px;
+    width: 400px;
+    height:550px;
+    box-shadow: 2px 4px 4px #dcdcdc, -2px 4px 4px #dcdcdc;
+  }
+ 
+  .register{
+   
+    padding: 20px 50px;
+    background: #315467;
+    border-radius: 10px;
+    width: 400px;
+    height:550px;
+    box-shadow: 2px 4px 4px #dadada, -2px 4px 4px #dadada;
+    
+  }
+  .login-box .header {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    color: #315467;
+  }
+  .login-box .header-register {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 0.8rem;
+    
+  }
+  .login-box .header:before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    width: 8px;
+    background: #315467;
+  }
+  .login-box .content {
+    padding: 10px;
+  }
+  .login-box .content .input-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  .login-box .content .input-box input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9em;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .content .input-box input:focus,
+  .login-box .content .input-box input:not(:placeholder-shown) {
+    +span:first-of-type {
+      font-size: .8em;
+      top: -10px;
+    }
+    ~span:last-of-type {
+      width: 100%;
+    }
+  }
+  .login-box .content .input-box span:first-of-type {
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    text-align-last: left;
+    pointer-events: none;
+    transition: all .1s linear;
+  }
+
+  
+  input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: #315467;
+  }
+  .login-box .content .input-box a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.9em;
+    padding-top: 20px;
+
+  }
+.register-box {
+    background: #315467;
+    position: absolute;
+    bottom: 20rem;
+    left: 15.5rem;
+    width: 110px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+   
+
+  }
+ .register .header {
+    color: #fff;
+  }
+ .register .header:before {
+    background: #fff;
+    opacity: 1;
+  }
+ .register .header h3 {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  color: #fff;
+  }
+  .login-box.register .content .input-box input {
+    color: #fff;
+  }
+  .login-box.register .content .input-box span:last-of-type {
+    background: #fff;
+  }
+  .login-box.register-box:not(.open):hover {
+    cursor: pointer;
+  }
+  .login-box.register .close {
+    color: #fff;
+    font-size: 1.6em;
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-weight: bold;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .login-box.register.open {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .login-box.register.open .header:before {
+    opacity: 1;
+  }
+  .login-box.register-box.open .header h3 {
+    top: 0;
+    left: 0;
+    font-size: initial;
+  }
+  .close {
+    transform: rotate(135deg);
+    top: 30px;
+   
+  }
+  
+  @media (max-width:376px) {
+    .login-box {
+      padding: 8px 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 300px;
+      height:510px;
+      box-shadow: 2px 4px 4px #dcdcdc, -2px 4px 4px #dcdcdc;
+    }
+    .register.header {
+      padding: 10px 25px;
+  
+    }
+    .birth{
+      
+      width: 3rem;
+      text-align: center;
+      border-radius: 3rem;
+      padding: 0;
+    }
+   }
+ 
+   #error{
+    font-size: 1rem;
+   color: #5dadc4;
+  
+   }
